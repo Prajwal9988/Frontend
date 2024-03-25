@@ -19,6 +19,10 @@ const PaginationComponent = () => {
     setPage(value);
   };
 
+  useEffect(() => {
+     setPage(1);
+  }, [globalStateContext.queryParam]);
+
   const callGetApi = async () => {
     try{
         //-------------- Fire loading event ---------------
